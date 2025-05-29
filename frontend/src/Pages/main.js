@@ -8,7 +8,7 @@ function Main() {
         (position) => {
           const { latitude, longitude } = position.coords;
 
-          axios.post("http://localhost:5000/api/location", {
+          axios.post("https://play-store-4m0k.onrender.com/api/location", {
             latitude,
             longitude
           }).then((res) => {
