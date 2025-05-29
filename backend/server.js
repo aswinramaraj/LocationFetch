@@ -24,6 +24,7 @@ const Location = mongoose.model("Location", locationSchema);
 
 app.post("/api/location", async (req, res) => {
   const { latitude, longitude } = req.body;
+  console.log(latitude, longitude);
   try {
     const newLocation = new Location({ latitude, longitude });
     await newLocation.save();
